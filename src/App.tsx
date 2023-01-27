@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from './Components/Box';
+import { Layout } from './Components/Layout';
+import { Message } from './Components/Message';
+import { Restart } from './Components/Restart';
+import { Table } from './Components/Table';
+import GameProvider from './Context/GameContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GameProvider>
+      <Layout>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <Table>
+          <Box position={"1"}></Box>
+          <Box position={"2"}></Box>
+          <Box position={"3"}></Box>
+          <Box position={"4"}></Box>
+          <Box position={"5"}></Box>
+          <Box position={"6"}></Box>
+          <Box position={"7"}></Box>
+          <Box position={"8"}></Box>
+          <Box position={"9"}></Box>
+        </Table>
+        <Message text={"You Win!!!"} />
+        <Restart></Restart>
+      </Layout>
+    </GameProvider>
   );
 }
 
