@@ -1,7 +1,7 @@
 {
   "name": "tictactoe",
   "version": "0.1.0",
-  "homepage": "https://danilosoftwares.github.io/GameTicTacToe-React/",  
+  "homepage": "https://danilosoftwares.github.io/GameTicTacToe-React/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -19,6 +19,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0"
   }
 }
